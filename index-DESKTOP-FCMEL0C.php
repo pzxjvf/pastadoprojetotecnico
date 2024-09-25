@@ -52,15 +52,3 @@ if ($pessoas) {
     echo "Nenhum dado encontrado.";
 }
 
-
-$page = isset($_GET['page']) ? $_GET['page'] : 'home';
-
-if ($page == 'home') {
-    include 'home.php';
-} elseif ($page == 'contact') {
-    include 'contact.php';
-} else {
-    include '404.php'; // Página de erro 404
-}
-
-
