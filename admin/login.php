@@ -27,26 +27,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         header('Location:' . '../login.php');
         exit;
     }
-
-
-    // if ($usuario && password_verify($senha, $usuario['senha'])) {
-    //     // Login bem-sucedido, define a sessão do usuário
-    //     // $_SESSION['usuario_id'] = $usuario['id'];
-    //     // $_SESSION['usuario_nome'] = $usuario['nome'];
-    //     // $_SESSION['usuario_role'] = $usuario['role']; // Pode ser 'aluno' ou 'professor'
-    //     // Redireciona com base no papel (role)
-    //     if ($usuario['role'] == 'aluno') {
-    //         header('Location: dashboard_aluno.php');
-    //         exit();
-    //     } elseif ($usuario['role'] == 'professor') {
-    //         header('Location: dashboard_professor.php');
-    //         exit();
-    //     }
-    // } else {
-    //     // Credenciais inválidas
-    //     echo "Email ou senha incorretos.";
-    // }
 }
+
+       
 
 
 
