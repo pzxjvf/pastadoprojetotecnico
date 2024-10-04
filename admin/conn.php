@@ -1,4 +1,5 @@
 <?php
+
 // Configurações do banco de dados
 $host = 'localhost'; // Endereço do servidor MySQL
 $dbname = 'portal_ceaat_db'; // Nome do banco de dados
@@ -16,7 +17,7 @@ try {
     $pdo = new PDO($dsn, $username, $password, $options);
     
     // Mensagem de sucesso (opcional)
-    echo "Conexão bem-sucedida!";
+    //echo "Conexão bem-sucedida!";
 } catch (PDOException $e) {
     // Tratamento de erros
     echo "Erro na conexão: " . $e->getMessage();
