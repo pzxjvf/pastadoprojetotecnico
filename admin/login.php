@@ -1,6 +1,21 @@
 <?php
 session_start(); // Para manter a sessão do usuário
 
+
+if (isset($_SESSION['login_error'])) {
+    echo '<div class="toast align-items-center text-white bg-danger border-0 position-fixed top-0 end-0 mt-3 me-3" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">'
+                . $_SESSION['login_error'] . 
+                '</div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>';
+
+    unset($_SESSION['login_error']);
+}
+
+
 include 'conn.php'; // Inclua a conexão com o banco de dados
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
